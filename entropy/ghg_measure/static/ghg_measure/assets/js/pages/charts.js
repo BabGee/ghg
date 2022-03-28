@@ -61,16 +61,15 @@ $(document).ready(function () {
             curve: 'smooth'
         },
         series: [{
-            name: 'series1',
-            data: [31, 40, 28, 51, 42, 109, 100]
-        }, {
-            name: 'series2',
-            data: [11, 32, 45, 32, 34, 52, 41]
-        }],
+            name: 'Mombasa',
+            data: [310, 400, 280, 510, 720, 809, 800]
+        },
+],
+        
 
         xaxis: {
             type: 'datetime',
-            categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],
+            categories: ["2022-03-28T05:30:00", "2022-03-28T06:30:00", "2022-03-28T07:30:00", "2022-03-28T08:30:00", "2022-03-28T09:30:00", "2022-03-28T10:30:00", "2022-03-28T11:30:00"],
             labels: {
                 style: {
                     colors: 'rgba(94, 96, 110, .5)'
@@ -117,17 +116,17 @@ $(document).ready(function () {
             colors: ['transparent']
         },
         series: [{
-            name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+            name: 'Carbon Dioxide',
+            data: [610, 600, 680, 710, 820, 709, 800, 709, 900]
         }, {
-            name: 'Revenue',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+            name: 'Methane',
+            data: [210, 200, 280, 210, 220, 209, 200, 209, 200]
         }, {
-            name: 'Free Cash Flow',
-            data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+            name: 'Fluorinated Gases',
+            data: [110, 100, 180, 110, 120, 109, 100, 109, 100]
         }],
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            categories: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             labels: {
                 style: {
                     colors: 'rgba(94, 96, 110, .5)'
@@ -136,7 +135,7 @@ $(document).ready(function () {
         },
         yaxis: {
             title: {
-                text: '$ (thousands)'
+                text: 'Emissions (ppm3)'
             }
         },
         fill: {
@@ -146,7 +145,7 @@ $(document).ready(function () {
         tooltip: {
             y: {
                 formatter: function (val) {
-                    return "$ " + val + " thousands"
+                    return "GHG " + val + " ppm3"
                 }
             }
         },
@@ -165,20 +164,20 @@ $(document).ready(function () {
 
     var options4 = {
         series: [{
-            name: 'Marine Sprite',
-            data: [44, 55, 41, 37, 22, 43, 21]
+            name: 'Matatus',
+            data: [44, 55, 41, 37, 22, 43, 21, 41, 37, 22, 23, 41]
         }, {
-            name: 'Striking Calf',
-            data: [53, 32, 33, 52, 13, 43, 32]
+            name: 'TukTuks',
+            data: [53, 32, 33, 52, 13, 43, 32, 41, 37, 12, 43, 21]
         }, {
-            name: 'Tank Picture',
-            data: [12, 17, 11, 9, 15, 11, 20]
+            name: 'Small Vehicles',
+            data: [12, 17, 11, 9, 15, 11, 20, 41, 37, 22, 63, 11]
         }, {
-            name: 'Bucket Slope',
-            data: [9, 7, 5, 8, 6, 9, 4]
+            name: 'Motorcycle',
+            data: [9, 7, 5, 8, 6, 9, 4, 41, 37, 22, 23, 31]
         }, {
-            name: 'Reborn Kid',
-            data: [25, 12, 19, 32, 25, 24, 10]
+            name: 'Lorries',
+            data: [25, 12, 19, 32, 25, 24, 10, 41, 27, 12, 73, 11]
         }],
         chart: {
             type: 'bar',
@@ -196,10 +195,10 @@ $(document).ready(function () {
             colors: ['#fff']
         },
         title: {
-            text: '100% Stacked Bar'
+            text: 'Monthly Averages'
         },
         xaxis: {
-            categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
+            categories: ['Jan', 'Feb', 'March', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
         },
         tooltip: {
             y: {
@@ -495,13 +494,13 @@ $(document).ready(function () {
     var chart8 = new ApexCharts(document.querySelector("#apex8"), options8);
     chart8.render();
 
-    new Chart(document.getElementById("chartjs1"), { "type": "line", "data": { "labels": ["January", "February", "March", "April", "May", "June", "July"], "datasets": [{ "label": "My First Dataset", "data": [65, 59, 80, 81, 56, 55, 40], "fill": false, "borderColor": "rgb(75, 192, 192)", "lineTension": 0.1 }] }, "options": {} });
+    new Chart(document.getElementById("chartjs1"), { "type": "line", "data": { "labels": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday", "Sunday"], "datasets": [{ "label": "GHG Emissions", "data": [910, 840, 880, 710, 920, 509, 300], "fill": false, "borderColor": "rgb(75, 192, 192)", "lineTension": 0.1 }] }, "options": {} });
 
-    new Chart(document.getElementById("chartjs2"), { "type": "bar", "data": { "labels": ["January", "February", "March", "April", "May", "June", "July"], "datasets": [{ "label": "My First Dataset", "data": [65, 59, 80, 81, 56, 55, 40], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] }, "options": { "scales": { "yAxes": [{ "ticks": { "beginAtZero": true } }] } } });
+    new Chart(document.getElementById("chartjs2"), { "type": "bar", "data": { "labels": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday", "Sunday"], "datasets": [{ "label": "GHG Emissions", "data": [910, 840, 880, 710, 920, 509, 300], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] }, "options": { "scales": { "yAxes": [{ "ticks": { "beginAtZero": true } }] } } });
 
-    new Chart(document.getElementById("chartjs3"), { "type": "radar", "data": { "labels": ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"], "datasets": [{ "label": "My First Dataset", "data": [65, 59, 90, 81, 56, 55, 40], "fill": true, "backgroundColor": "rgba(255, 99, 132, 0.2)", "borderColor": "rgb(255, 99, 132)", "pointBackgroundColor": "rgb(255, 99, 132)", "pointBorderColor": "#fff", "pointHoverBackgroundColor": "#fff", "pointHoverBorderColor": "rgb(255, 99, 132)" }, { "label": "My Second Dataset", "data": [28, 48, 40, 19, 96, 27, 100], "fill": true, "backgroundColor": "rgba(54, 162, 235, 0.2)", "borderColor": "rgb(54, 162, 235)", "pointBackgroundColor": "rgb(54, 162, 235)", "pointBorderColor": "#fff", "pointHoverBackgroundColor": "#fff", "pointHoverBorderColor": "rgb(54, 162, 235)" }] }, "options": { "elements": { "line": { "tension": 0, "borderWidth": 3 } } } });
+    new Chart(document.getElementById("chartjs3"), { "type": "radar", "data": { "labels": ["Ferry", "Port", "CBD", "Kongowea", "Changamwe", "Bamburi", "Old Town"], "datasets": [{ "label": "Carbon Dioxide", "data": [65, 59, 90, 81, 56, 55, 40], "fill": true, "backgroundColor": "rgba(255, 99, 132, 0.2)", "borderColor": "rgb(255, 99, 132)", "pointBackgroundColor": "rgb(255, 99, 132)", "pointBorderColor": "#fff", "pointHoverBackgroundColor": "#fff", "pointHoverBorderColor": "rgb(255, 99, 132)" }, { "label": "Methane", "data": [28, 48, 40, 19, 96, 27, 100], "fill": true, "backgroundColor": "rgba(54, 162, 235, 0.2)", "borderColor": "rgb(54, 162, 235)", "pointBackgroundColor": "rgb(54, 162, 235)", "pointBorderColor": "#fff", "pointHoverBackgroundColor": "#fff", "pointHoverBorderColor": "rgb(54, 162, 235)" }] }, "options": { "elements": { "line": { "tension": 0, "borderWidth": 3 } } } });
 
-    new Chart(document.getElementById("chartjs4"), { "type": "doughnut", "data": { "labels": ["Red", "Blue", "Yellow"], "datasets": [{ "label": "My First Dataset", "data": [300, 50, 100], "backgroundColor": ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"] }] } });
+    new Chart(document.getElementById("chartjs4"), { "type": "doughnut", "data": { "labels": ["Ferry Area", "Port Area", "CBD"], "datasets": [{ "label": "GHG Emissions", "data": [990, 750, 450], "backgroundColor": ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"] }] } });
 
     var DrawSparkline = function() {
         $('#sparkline1').sparkline([0, 23, 43, 35, 44, 45, 56, 37, 40], {
@@ -612,7 +611,7 @@ $(document).ready(function () {
                         mpoints.splice(0,1);
                     mousetravel = 0;
                     $('#sparkline5').sparkline(mpoints, {
-                        tooltipSuffix: ' pixels per second',
+                        tooltipSuffix: ' GHG Emissions per second',
                         type: 'line',
                         width: '100%',
                         height: '165',
